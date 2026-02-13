@@ -24,7 +24,7 @@ void sortion(int *arr, int len){
 
 int main(){
     int len=7;
-    int arr[7] = {56, 34, 77, 21, 145, 6};
+    int arr[7] = {56, 34, 77, 21, 145, 876};
     sortion(arr, len);
     display(arr, len);
 
