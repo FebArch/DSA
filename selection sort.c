@@ -12,14 +12,14 @@ int main()
     for (int i = 0; i < len; i++)
     {
         // assuming 1st element as smallest number here to start looping and checking and finding out the smallest element within the array
-        int minNum = arr[i];
+        // int minNum = arr[i];
         int minNumIndex = i;
        
         for (int j = (i+1); j < len; j++)
         {
-            if (arr[i] > arr[j])
+            if (arr[minNumIndex] > arr[j])
             {
-                minNum = arr[j];
+                // minNum = arr[j];
                 minNumIndex = j;
             }
         }
