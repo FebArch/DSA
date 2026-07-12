@@ -1,3 +1,23 @@
+/*
+If this were an interview...
+
+Suppose I asked:
+
+"Implement selection sort."
+
+If you wrote this from scratch in 10–15 minutes, I'd be happy.
+
+I'd then ask follow-up questions:
+
+What's the time complexity?
+Is it stable?
+Can it be made stable?
+Best-case complexity?
+Why does it use fewer swaps than bubble sort?
+
+Those questions test your understanding beyond implementation.
+*/
+
 #include <stdio.h>
 
 void displayArray(int *arr, int len);
