@@ -8,7 +8,7 @@ int main(){
     int arr[4] = {40,10,20,30};
     int size = 4;
     printf("Size of array before is: %d\n", size);
-    display(arr, size);    // if element is not present it will pop the last element
+    display(arr, size);    // if element is not present it will pop the last elementline
     deleteElement(arr, &size, 140);
     display(arr, size);
     printf("Size of array after is: %d\n", size);
