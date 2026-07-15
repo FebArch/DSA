@@ -37,7 +37,7 @@ int main(){
     n3->next = NULL;
 
     displayLinkedList(n0);
-    addLinkedList(n2, 45);
+    addLinkedList(n3, 45);
     displayLinkedList(n0);
     return 0;
 }
