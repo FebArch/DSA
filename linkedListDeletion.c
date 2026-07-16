@@ -60,9 +60,10 @@ void linkedListDelete(struct Node* head, int index){
             free(temp);
             break;
         }else if(index == 0){
+            struct Node* ptr = (head->next);
             head->data = (*(head->next)).data;
             head->next = (*(head->next)).next;
-            // free(head);
+            free(ptr);
             break;
         }
         head = head->next;
