@@ -10,13 +10,6 @@ int sumofDigits(int n){
     // cout << n <<endl;
     return sum += sumofDigits(n/10);
 }
-/*
-1234
-123
-12
-1
-
-*/
 
 int main(){
     int n = 12345;
