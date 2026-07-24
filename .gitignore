@@ -1,4 +1,6 @@
 .vscode
+vscode_backup
 *.exe
+*.pdf
 
 DSA_TopicWise_Notes/*
