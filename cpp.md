@@ -35,8 +35,9 @@ Practice
 Create these programs yourself:
 
 ATM simulator
-Fibonacci generator
 Password strength checker
+
+
 
 Aim for about 10–15 small programs.
 
@@ -54,9 +55,8 @@ Implement:
 
 GCD
 LCM
-Factorial
 Binary to decimal
-Decimal to binary
+
 Palindrome checker
 Armstrong number
 Matrix addition
