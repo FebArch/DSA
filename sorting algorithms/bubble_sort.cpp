@@ -16,30 +16,26 @@ int main()
     int len = 5;
     int size = len;
     int arr[len] = {1, 3, 7, 2, 5};
-    int temp, i = 0;
+    int temp;
     bool passthrough = true;
+
+    cout << "Unsorted Array: \n";
+    displayArray(arr, size);
 
     while(passthrough)
     {
-        for (int j = 0; j < len; j++)
+        for (int i = 0; i < (len-1); i++)
         {
-            
-            if (j+1 == len)
+            if (arr[i] > arr[i + 1])
             {
-                continue;
-            }
-            else if (arr[j] > arr[j + 1])
-            {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
                 passthrough = true;
-                // cout << j << "true\n";
                 continue;
             }
             else
             {
-                // cout << j << "false\n" << arr[j] <<" , "<< arr[j + 1] << endl; 
                 passthrough = false;
             }
         }
@@ -48,7 +44,7 @@ int main()
             len--;
         }
     }
-
+    cout << "Sorted Array: \n";
     displayArray(arr, size);
     return 0;
 }

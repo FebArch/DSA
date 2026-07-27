@@ -1,5 +1,3 @@
-If you liked Beej's style, I'd recommend a code-first approach where you spend 20–30% reading and 70–80% writing code. The biggest mistake many learners make is reading hundreds of pages without building anything.
-
 Stage 0: Set up your environment (1 day)
 
 Install:
@@ -9,23 +7,10 @@ GCC or Clang (g++)
 CMake (learn the basics later)
 Git
 
-Compile programs from the terminal:
-
-g++ main.cpp -std=c++20 -Wall -Wextra -o app
-./app
-
-
-Get comfortable compiling manually before relying on an IDE.
-
 Stage 1: Core C++ (1 week)
-
-Read just enough on LearnCpp to understand each topic, then immediately practice it.
 
 Topics:
 
-Functions
-if, switch
-Loops
 References
 const
 std::string
@@ -38,15 +23,10 @@ ATM simulator
 Password strength checker
 
 
-
-Aim for about 10–15 small programs.
-
 Stage 2: Functions and Problem Solving (1 week)
 
 Learn:
 
-Function overloading
-Pass by reference
 Default parameters
 Header files
 Practice
