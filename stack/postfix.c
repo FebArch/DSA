@@ -60,7 +60,8 @@ int main()
     operatorsStack.arr = (struct precedence *)malloc(sizeof(struct precedence) * operatorsStack.size);
 
     char *postfix = (char*) malloc(sizeof(char) * 30);
-
+    char *ptr = postfix;
+    
     char *exp = "x*y-z/k";
     printf("%s\n", exp);
 
@@ -105,7 +106,7 @@ int main()
             *postfix = *exp;
         }
         v = 0;
-        postfix++;
+        // postfix++;
         exp++;
     }
 
