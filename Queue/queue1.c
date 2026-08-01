@@ -13,6 +13,7 @@ int isFull(struct Queue q);
 void displayQueue(struct Queue q);
 void enqueue(struct Queue* q, int element);
 int dequeue(struct Queue* q);
+int peek(struct Queue q, int val);
 
 int main(){
     struct Queue q1;
@@ -43,7 +44,8 @@ int main(){
     printf("Dequeued Element is %d\n", a);
     displayQueue(q1);
     
-
+    a = peek(q1, 3);
+    printf("The %d element from front is: %d\n", 1, a);
     return 0;
 }
 
@@ -104,7 +106,9 @@ int dequeue(struct Queue* q){
 
 
 
-
+int peek(struct Queue q, int val){
+    return q.arr[q.f+val];
+}
 
 
 
