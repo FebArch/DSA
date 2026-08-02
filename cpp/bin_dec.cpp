@@ -17,21 +17,22 @@ int myPow(int x, int n){
 
 int toDec(int bin){
     int n=0;
-    int power=0;
+    int power=1;
     while (bin > 0)
     {
         if (bin%10 == 1)
         {
-            n += myPow(2, power);
+            // n += myPow(2, power);
+            n += (bin%10) * power;
         }
         bin/=10;
-        power++;
+        power*=2;
     }
     return n;
 }
 
 int main(){
-    int binary = 101010; //5
+    int binary = 101011; //5
     int n = toDec(binary);
     printf("%d\n", n);
     return 0;
