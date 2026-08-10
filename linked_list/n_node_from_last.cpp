@@ -147,30 +147,30 @@ void removeElement(Node *n)
 
 
 void peek(Node* n){
-    int llLength = llSize(*n);
-    int index;
+    int k;
 
     displayLinkedList(n);
     cout << "You are peeking in your linked list from last element";
     cout << "Enter the number of element you want to peek in: ";
-    cin>>index;
+    cin>>k;
 
-    Node* ptr = n;
-    if (index > llLength)
+    Node* p = n;
+    Node* q = n;
+    
+    while (q != NULL)
     {
-        cout << "Your Peek Index is greater than your Linked List" << endl;
-        return;
+        if (k==0)
+        {
+            p = p->next;
+            q = q->next;
+            continue;
+        }
+        q = q->next;
+        k--;
     }
     
 
-    int realIndex = llLength - index;
-
-    while (realIndex)
-    {
-        realIndex--;
-        ptr = ptr->next;
-    }
-    cout << "Element at " << index << " from last is " << ptr->data;  
+    cout << "Element at " << k << " from last is " << p->data;  
 }
 
 
