@@ -3,9 +3,9 @@
 int binarySearch(int* ptr,int size, int element);
 
 int main(){
-    int element = 9;
-    int arr[10] = {1,2,3,4,5,6,7,8,9};
-    int index = binarySearch(arr, 9, element);
+    int element = 31;
+    int arr[10] = {1,2,3,4};
+    int index = binarySearch(arr, 4, element);
     printf("Index of %d is %d\n", element, index);
 
     return 0;

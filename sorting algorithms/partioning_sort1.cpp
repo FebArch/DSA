@@ -12,20 +12,19 @@ void partitioning_sort(vector<int>& nums){
 
     while (passthrough)
     {
-        display(nums);
-        if (lptr == sz)
+        if (lptr >= rptr)
         {
             break;
         }        
 
         if (lptr > rptr)
         {
-            nums[lptr] += pivot;
-            nums[sz] = nums[lptr] - pivot;
-            nums[lptr] -= nums[sz];
+
+            int temp = nums[lptr];
+            nums[lptr] = pivot;
+            nums[sz] = temp;
 
             pivot = nums[sz];
-            cout << pivot << endl;
             lptr = 0;
             rptr = sz-1;
         }
@@ -47,7 +46,7 @@ void partitioning_sort(vector<int>& nums){
 }
 
 int main(){
-    vector<int> nums = {0,5,2,1,6,3};
+    vector<int> nums = {0,5,2,1,6,3,4};
     display(nums);
     partitioning_sort(nums);
     display(nums);

@@ -18,8 +18,9 @@ void insertSort(int *arr, int len){
 }
 
 int main(){
-    int len = 5;
-    int arr[5] = {4,1,2,7,5};
+    int len = 6;
+    int arr[6] = {4, 12, 23, 7, 18, 9};
+    display(arr, len);
     insertSort(arr, len);
     display(arr, len);
     return 0;
