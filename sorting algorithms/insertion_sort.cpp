@@ -7,7 +7,7 @@ void insertionSort(vector<int>& v);
 
 int main()
 {
-    vector<int> v = {4, 12, 23, 7, 18, 9};
+    vector<int> v = {91, 92, 94, 93, 92, 91};
     displayArray(v);
     insertionSort(v);
     displayArray(v);
