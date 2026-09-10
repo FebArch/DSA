@@ -12,7 +12,7 @@ Use recursion only.
 ### 51. Print Numbers N → 1
 Use recursion only.
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
