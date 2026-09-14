@@ -10,6 +10,8 @@ int printNumbers(int n){
 }
 
 int main(){
+    int  a = NULL;
+    std::cout << a << std::endl;
     int n;
     std::cout << "Enter your nummber: ";
     std::cin >> n;

@@ -1,14 +1,14 @@
 # DSA Practice — Linked List, Stack, Recursion & Queue
 
-> **Language:** C  
-> **Rule:** Try to solve each problem yourself before looking at hints/solutions.
->
-> **For every problem, record:**
-> - [ ] Solved without help
-> - [ ] Time Complexity
-> - [ ] Space Complexity
-> - [ ] Tested edge cases
-> - [ ] Can explain the logic without code
+ **Language:** C  
+ **Rule:** Try to solve each problem yourself before looking at hints/solutions.
+
+ **For every problem, record:**
+ - [ ] Solved without help
+ - [ ] Time Complexity
+ - [ ] Space Complexity
+ - [ ] Tested edge cases
+ - [ ] Can explain the logic without code
 
 ---
 
@@ -82,11 +82,11 @@ Find both maximum and minimum values in one traversal.
 ### 8. Remove a Node by Value
 Delete the first occurrence of a given value.
 
-- [ ] Solved
+- [x] Solved
 - **Must handle:**
   - Empty list
   - Head deletion
-  - Middle deletion
+  * Middle deletion~~
   - Last-node deletion
   - Value not found
 
@@ -127,10 +127,10 @@ Implement:
 Example:
 
 `1 → 2 → 3 → 4`
-`    ↑         ↓`
+`    ↑       ↓`
 `    ← ← ← ← ←`
 
-- [ ] Solved
+- [x] Solved
 - **Constraint:** No extra array
 - **Constraint:** O(1) extra space
 - **Pattern:** Floyd's Cycle Detection

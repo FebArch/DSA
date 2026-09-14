@@ -14,37 +14,39 @@ void displayArray(int *arr, int len)
 int main()
 {
     int len = 5;
-    int size = len;
-    int arr[len] = {1, 3, 7, 2, 5};
+    int sz = len-1;
+    int arr[len] = {6,5,3,2,1};
     int temp;
     bool passthrough = true;
 
     cout << "Unsorted Array: \n";
-    displayArray(arr, size);
+    displayArray(arr, len);
 
     while(passthrough)
     {
-        for (int i = 0; i < (len-1); i++)
+        cout << "passthrough is true " << endl;
+        for (int i = 0; i < sz; i++)
         {
+            cout << sz << endl;
             if (arr[i] > arr[i + 1])
             {
                 temp = arr[i];
                 arr[i] = arr[i + 1];
                 arr[i + 1] = temp;
                 passthrough = true;
-                continue;
             }
             else
             {
+                cout << "passthrough is false " << endl;
                 passthrough = false;
             }
         }
         if (passthrough)
         {
-            len--;
+            sz--;
         }
     }
     cout << "Sorted Array: \n";
-    displayArray(arr, size);
+    displayArray(arr, len);
     return 0;
 }

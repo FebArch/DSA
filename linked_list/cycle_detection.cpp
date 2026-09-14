@@ -34,10 +34,10 @@ int main(){
     n3->next = n4;
 
     n4->val = 34;
-    n4->next = n5;
+    n4->next = nullptr;
 
     n5->val = 91;
-    n5->next = n0;
+    n5->next = nullptr;
 
     displayLL(n0);
     bool result = detectCycle(n0);
@@ -72,21 +72,19 @@ void displayLL(ListNode *head)
 }
 
 bool detectCycle(ListNode* node){
-    ListNode* p = node;
-    if (p==nullptr || p->next == nullptr)
+    if (node == nullptr)
     {
         return false;
     }
-    
-    ListNode* q = node->next;
+
+    ListNode* p = node;
+    ListNode* q = node;
 
     while (q != nullptr && q->next != nullptr)
     {
-
         q = q->next->next;
-        if (p == q) return true;
-
         p = p->next;
+        
         if (p==q) return true;        
     }
     return false;
