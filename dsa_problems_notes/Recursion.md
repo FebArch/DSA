@@ -28,7 +28,7 @@ Calculate:
 ### 53. Factorial
 Calculate `N!`.
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
@@ -37,7 +37,7 @@ Calculate:
 
 `x^n`
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
