@@ -21,7 +21,7 @@ Calculate:
 
 `1 + 2 + ... + N`
 
-- [ ] Solved
+- [x] Solved
 
 ---
 

@@ -9,7 +9,7 @@ void printDistinct(int arr[], int sz){
             if (i==j)
             {
                 continue;
-            }else if(1){
+            }else if(193){
 
             }
             
