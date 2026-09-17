@@ -11,16 +11,18 @@ struct ListNode{
 };
 
 void printList(struct ListNode *head);
-ListNode* reverseList(ListNode* node, ListNode* nextPtr);
-
+ListNode* reverseList(ListNode* prev, ListNode* curr);
+ListNode* reverseLinkedList(ListNode* node, ListNode* head);
 
 int main(){
     ListNode* n5 = new ListNode(4, nullptr);
     ListNode* n4 = new ListNode(11, n5);
-    ListNode* n3 = new ListNode(34, n4);
-    ListNode* n2 = new ListNode(23, n3);
-    ListNode* n1 = new ListNode(7, n2);
-    ListNode* n0 = new ListNode(3, n1);
+    ListNode* n3 = new ListNode(4, n4);
+    ListNode* n2 = new ListNode(3, n3);
+    ListNode* n1 = new ListNode(2, n2);
+    ListNode* n0 = new ListNode(1, n1);
+
+    ListNode* head;
 
     printList(n0);
     n0 = reverseList(n0, n1);
@@ -29,7 +31,7 @@ int main(){
 }
 
 void printList(struct ListNode *head){
-    struct ListNode* ptr=head;
+    ListNode* ptr=head;
     cout << "{"; 
     while (ptr != nullptr)
     {
@@ -41,11 +43,24 @@ void printList(struct ListNode *head){
 
 // 3, 7, 23, 34, 11, 4
 
-ListNode* reverseList(ListNode* currentPtr, ListNode* nextPtr){
-    if (nextPtr->next == NULL)
+ListNode* reverseList(ListNode* prev, ListNode* curr){
+    if (curr->next == NULL)
     {
-        return nextPtr;
+        curr->next = prev;
+        prev->next = nullptr;
+        return curr;
     }
-    (reverseList(currentPtr->next, nextPtr->next))->next = nextPtr;
-    return nextPtr;
+    ListNode* headptr = reverseList(prev->next, curr->next);
+    curr->next = prev;
+    prev->next = nullptr;
+    return headptr;
 }
+
+// ListNode* reverseLinkedList(ListNode* node){
+//     if(node->next == nullptr){
+//         return node;
+//     }
+//     ListNode* headPtr = reverseLinkedList(node->next);
+//     headPtr->next = node;
+//     node->next = nullptr;
+// }
