@@ -5,7 +5,7 @@
 ### 50. Print Numbers 1 → N
 Use recursion only.
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
@@ -72,7 +72,8 @@ Example:
 Example:
 
 `madam → true`
-
+`maam → true`
+`joke → false`
 - [ ] Solved
 
 ---
@@ -94,7 +95,7 @@ Calculate nth Fibonacci number.
 ---
 
 ### 61. Find Maximum in an Array Recursively
-- [ ] Solved
+- [x] Solved
 
 ---
 

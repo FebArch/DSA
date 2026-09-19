@@ -7,11 +7,11 @@ int maximumNumber(vector<int>& nums, int maxNum=INT_MIN, int index=0);
 int myMax(vector<int>& v, int index=0);
 
 int main(){
-    vector<int> array = {-1,23,4, 17, 99};
+    vector<int> array = {-1};
     vector<int> array2 = {};
     printArray(array);
     // int result = maximumNumber(array);
-    cout << "Maximum number present in your vector is " << myMax(array) << endl;
+    cout << "Maximum number present in your vector is " << myMax(array2) << endl;
     return 0;
 }
 
@@ -41,6 +41,12 @@ int maximumNumber(vector<int>& nums, int maxNum, int index){
 
 // 1,23,4, 17
 int myMax(vector<int>& v, int index){
+    if (v.size() == 0)
+    {
+        cout << "Your vector is empty!" << endl;
+        return 0;
+    }
+    
     if (index >= (v.size()-1))
     {
         return v[index];
