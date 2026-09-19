@@ -88,7 +88,7 @@ Calculate nth Fibonacci number.
 # 🟡 Level 2 — Recursion + Problem Solving
 
 ### 60. Reverse a Linked List Recursively
-- [ ] Solved
+- [x] Solved
 - **Important:** Understand pointer changes
 
 ---

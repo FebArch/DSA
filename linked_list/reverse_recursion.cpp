@@ -43,29 +43,28 @@ void printList(struct ListNode *head){
 
 // 3, 7, 23, 34, 11, 4
 
-// ListNode* reverseList(ListNode* prev, ListNode* curr){
-//     if (curr->next == NULL)
-//     {
-//         curr->next = prev;
-//         prev->next = nullptr;
-//         return curr;
-//     }
-//     ListNode* headptr = reverseList(prev->next, curr->next);
-//     curr->next = prev;
-//     prev->next = nullptr;
-//     return headptr;
-// }
+ListNode* reverseList(ListNode* prev, ListNode* curr){
+    if (curr->next == NULL)
+    {
+        curr->next = prev;
+        prev->next = nullptr;
+        return curr;
+    }
+    ListNode* headptr = reverseList(prev->next, curr->next);
+    curr->next = prev;
+    prev->next = nullptr;
+    return headptr;
+}
 
 ListNode* reverseLinkedList(ListNode* node){
-    if (node->next == nullptr)
+    if (node->next == nullptr || node == nullptr)
     {
-        
         return node;
     }
     
-    ListNode* nextNode = node->next; //14
+    ListNode* nextNode = node->next;
     ListNode* headPtr = reverseLinkedList(node->next); //14
-    nextNode->next = node; // 14->13
-    node->next = nullptr;//14->13->null
+    nextNode->next = node;
+    node->next = nullptr;
     return headPtr;
 }
