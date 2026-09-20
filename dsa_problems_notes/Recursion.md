@@ -102,7 +102,7 @@ Calculate nth Fibonacci number.
 ### 62. Check if Array is Sorted
 Determine recursively whether an array is sorted.
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
