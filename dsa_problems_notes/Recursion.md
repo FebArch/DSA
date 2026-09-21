@@ -113,7 +113,7 @@ Determine recursively whether an array is sorted.
 ---
 
 ### 64. Sum of Array Elements Recursively
-- [ ] Solved
+- [x] Solved
 
 ---
 
