@@ -120,7 +120,7 @@ Determine recursively whether an array is sorted.
 ### 65. Count Occurrences in Array
 Count how many times `x` occurs.
 
-- [ ] Solved
+- [x] Solved
 
 ---
 

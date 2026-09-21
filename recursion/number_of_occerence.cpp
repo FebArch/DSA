@@ -3,7 +3,7 @@
 using namespace std;
 
 void printArray(vector<int> nums);
-int occurence(vector<int> nums,int k, int index=0);
+int occurence(vector<int>& nums,int k, int index=0);
 
 int main() {
     int k= 2;
@@ -23,7 +23,12 @@ void printArray(vector<int> nums){
     cout << "\b\b}" << endl;
 }
 
-int occurence(vector<int> nums, int k, int index){
+int occurence(vector<int>& nums, int k, int index){
+    if(nums.size() == 0){
+        cout << "Your vector is empty";
+        return 0;
+    }
+
     if (index == (nums.size() - 1))
     {
         return (nums[index] == k) ? 1 : 0;
