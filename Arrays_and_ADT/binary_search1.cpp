@@ -6,7 +6,7 @@ void printArray(vector<int> nums);
 int search(vector<int> nums, int k);
 
 int main() {
-    int k= 21;
+    int k= 17;
     vector<int> arr= {2,4,6,8,16,20};
     printArray(arr);
     int result = search(arr, k);
@@ -26,17 +26,13 @@ void printArray(vector<int> nums){
 int search(vector<int> nums, int k){
     int f= 0, l= nums.size();
     int m = (f+l)/2;
-    if (k > nums[l-1])
-    {
-        cout << "The element " << k << " is not present in the array" << endl;
-        return -1;
-    }
     
     while (l != f )
     {
         if (nums[m] == k)  return m;
         else if(nums[m] < k) f = m;
         else if(nums[m] > k) l = m;
+        
         
         m = (f+l)/2;
     }
