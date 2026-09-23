@@ -46,7 +46,7 @@ Example:
 
 `12345 → 15`
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
@@ -55,7 +55,7 @@ Example:
 
 `123456 → 6`
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
