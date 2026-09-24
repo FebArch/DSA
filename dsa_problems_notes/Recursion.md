@@ -64,7 +64,7 @@ Example:
 
 `12345 → 54321`
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
@@ -107,7 +107,7 @@ Determine recursively whether an array is sorted.
 ---
 
 ### 63. Binary Search Recursively
-- [ ] Solved
+- [x] Solved
 - **Target:** O(log n)
 
 ---

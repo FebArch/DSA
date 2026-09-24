@@ -17,7 +17,7 @@ int count_digits(int n){
     {
         return 1;
     }
-    
+    n=n/10;
     int count = 1;
-    return count + count_digits(n/10);
+    return count + count_digits(n);
 }

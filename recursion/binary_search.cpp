@@ -26,7 +26,7 @@ void printArray(vector<int> nums){
 
 
 int search(vector<int> nums, int f, int l, int k){
-    if ((f+1) == l && nums[f] != k && nums[l] != k)
+    if ((f+1) == l && nums[f] != k && nums[l-1] != k)
     {
         cout << "The value " << k << " is not present in your vector" << endl;
         return -1;
