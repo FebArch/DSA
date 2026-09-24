@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Recursion.md",
+                "file": "Linked list.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Recursion"
+              "title": "Linked list"
             }
           }
         ]
@@ -190,9 +190,9 @@
   },
   "active": "b774524690f0c95a",
   "lastOpenFiles": [
+    "Recursion.md",
     "Linked list.md",
     "Untitled.base",
-    "Recursion.md",
     "Queue.md",
     "Welcome.md",
     "Stack.md"

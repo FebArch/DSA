@@ -74,7 +74,7 @@ Example:
 `madam → true`
 `maam → true`
 `joke → false`
-- [ ] Solved
+- [x] Solved
 
 ---
 
