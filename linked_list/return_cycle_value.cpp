@@ -14,18 +14,40 @@ struct ListNode{
 };
 
 void displayLL(ListNode *head);
-ListNode* cycleValue(ListNode* node);
+int cycleValue(ListNode* node);
 
 int main() {
-    ListNode* n5 = new ListNode(1, nullptr);
-    ListNode* n4 = new ListNode(9, n5);
-    ListNode* n3 = new ListNode(7, n4);
-    ListNode* n2 = new ListNode(43, n3);
-    ListNode* n1 = new ListNode(23, n2);
-    ListNode* n0 = new ListNode(11, n1);
+    ListNode* n7 = new ListNode;
+    ListNode* n6 = new ListNode;
+    ListNode* n5 = new ListNode;
+    ListNode* n4 = new ListNode;
+    ListNode* n3 = new ListNode;
+    ListNode* n2 = new ListNode;
+    ListNode* n1 = new ListNode;
 
-    displayLL(n0);
-    cout << "Cycled Value: " << cycleValue(n0)->val;
+    n1->val = 1;
+    n1->next = n2;
+
+    n2->val = 2;
+    n2->next = n3;
+
+    n3->val = 3;
+    n3->next = n4;
+
+    n4->val = 4;
+    n4->next = n5;
+
+    n5->val = 5;
+    n5->next = n6;
+
+    n6->val = 6;
+    n6->next = n7;
+
+    n7->val = 7;
+    n7->next = n3;
+
+    int result = cycleValue(n1);
+    cout << "Cycled Value: " << result;
     return 0;
 }
 
@@ -47,19 +69,26 @@ void displayLL(ListNode *head)
     cout << "\b\b}" << endl;
 }
 
-ListNode* cycleValue(ListNode* head){
+int cycleValue(ListNode* head){
     ListNode* slow = head;
-    ListNode* fast = head->next;
+    ListNode* fast = head;
+    bool twoStep = true, firstCatchDone=false;
 
     while (fast!=nullptr && fast->next != nullptr)
     {
-        fast = fast->next->next;
+        fast = (twoStep) ? fast->next->next : fast->next;
         slow = slow->next;
+
+        if (fast==slow && !firstCatchDone)
+        {
+            twoStep = false;
+            firstCatchDone = true;
+            slow = head;            
+        }else if(fast==slow && firstCatchDone){
+            return slow->val;
+        }
         
-        if(fast->next == slow) return fast;
-
-
     }
-    
 
+    return -1;
 }
