@@ -142,7 +142,7 @@ Don't just detect the cycle.
 
 Return the node where the cycle begins.
 
-- [ ] Solved
+- [x] Solved
 - **Target:** O(n) time, O(1) space
 - **Pattern:** Floyd's algorithm'
 Hint 1 : Move fast pointer first always and then move slow pointer and then compare.
