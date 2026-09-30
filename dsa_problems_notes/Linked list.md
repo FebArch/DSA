@@ -112,7 +112,7 @@ Implement:
 
 `insert(position, value)`
 
-- [ ] Solved
+- [x] Solved
 - **Must handle:**
   - Position 0
   - Middle
