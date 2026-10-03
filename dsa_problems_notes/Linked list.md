@@ -103,7 +103,7 @@ Result:
 
 `1 → 3 → 4`
 
-- [ ] Solved
+- [x] Solved
 
 ---
 
@@ -118,9 +118,46 @@ Implement:
   - Middle
   - End
   - Invalid position
+##### solution
+struct ListNode {
+    int val;
+    ListNode* next;
+
+    ListNode(int value) : val(value), next(nullptr) {}
+};
+
+ListNode* insert(ListNode* head, int value, int position) {
+    if (position < 0) {
+        return head;
+    }
+
+    ListNode** link = &head;
+
+    for (int i = 0; i < position; ++i) {
+        if (*link == nullptr) {
+            return head;  // Invalid position
+        }
+        link = &((*link)->next);
+    }
+
+    if (*link == nullptr && position > 0) {
+        return head;  // Position is beyond the end
+    }
+
+    ListNode* newNode = new ListNode(value);
+    newNode->next = *link;
+    *link = newNode;
+
+    return head;
+}
+}
 
 ---
 
+
+---
+
+---
 # 🟡 Level 2 — Two Pointer & Structural Problems
 
 ### 11. Detect a Cycle

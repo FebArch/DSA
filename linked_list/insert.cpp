@@ -112,4 +112,5 @@ void freeUpLinkedList(ListNode* node){
     
     freeUpLinkedList(node->next);
     delete(node);
+    node=nullptr;
 }
