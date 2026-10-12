@@ -6,15 +6,9 @@
 using namespace std;
 
 int main() {
-    char* str = "kevin";
-    if (*str == '\0')
-    {
-        cout << "string" << endl;
-    }else{
-        cout << "null" << endl;
-    }
-    cout << strlen(str);
-    
+    int i=0;
+    bool r = (bool) i;
+    cout << r << endl;
     return 0;
 }
 
